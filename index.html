@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Copatible" content="IE=edge">
+        <meta name="viewport" content="">
+        <title>Reto 2</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+
+        <div id="contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Target</th>
+                        <th>Capacity</th>
+                        <th>Category_id</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpoTabla">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        function cargarTabla() {
+            $.ajax({
+                url: 'https://g26e9109abcc6c1-db202109231843.adb.us-sanjose-1.oraclecloudapps.com/ords/admin/library/library',
+                type: 'GET',
+                data: 'json',
+                success: function(response) {
+                    var resultado = "";
+                    response.items.forEach(function(item){
+                      resultado+="<tr><td>"+item.id+"</td>";
+                      resultado+="<td>"+item.target+"</td>";
+                      resultado+="<td>"+item.capacity+"</td>";
+                      resultado+="<td>"+item.category_id+"</td></tr>";  
+                    });
+                    $('.cuerpoTabla').html(response);
+                },
+                error: function (xhr, status) {
+                    console.log(xhr.responseText);
+                },
+                complete: function (xhr, status){
+                    console.log(xhr.responseText)
+                }
+            })
+        }
+        $(document).ready(function(){
+
+            //getData();
+        });
+
+    </script>
+
+</html>
