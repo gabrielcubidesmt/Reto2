@@ -3,64 +3,79 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Copatible" content="IE=edge">
-        <meta name="viewport" content="">
-        <title>Reto 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+   
+    <body class="homeBody">
+   
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">    
+            <a class="nav-link" href="#"><i class="fa fa-home"></i>Home</a>
+            <a class="nav-link" href="redirusers.html"><i class="fa fa-fw fa-user-plus"></i>Registro</a>
+            <a class="nav-link" href="category.html"><i class="fa fa-fw fa-tasks"></i>Categorias</a>      
+            <a class="nav-link" href="library.html"><i class="fa fa-fw fa-cubes "></i>Cubiculos</a>      
+            <a class="nav-link" href="message.html"><i class="fa fa-fw  fa-envelope "></i>Mensajes</a>      
+            <a class="nav-link" href="reservation.html"><i class="fa fa-fw fa-book"></i>Reservaciones</a>      
+            </ul>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">              
+                <div class="card" style="width:400px;">
+                  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUvePhR35ttTv3wCi3ZY6q7PWOpacQ9JYWciXvTYS6EC-7fp70t5eOCl9wyd20LddfZkA&usqp=CAU" alt="Card image">
+                  <div class="card-body">
+                    <h4 class="card-title">Andres Cubides</h4>
+                    <a class="iconsA" href="#"><i class="fa fa-fw fa-share-alt-square"></i></a>
+                    <a class="iconsA" href="https://github.com/gabrielcubidesmt"><i class="fa fa-fw  fa-github"></i></a>
+                    <a class="iconsA" href="www.linkedin.com/in/andrescuor"><i class="fa fa-fw fa-linkedin-square "></i></a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbsyxHZxlmykyUtZxWeMRMguDbjHij5ik4--OaOs03Kg8VX7fC4lbikaBoD9k-leoOKm0&usqp=CAU" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Fredy Farfan</h4>
+                  <a class="iconsA" href="#"><i class="fa fa-fw fa-share-alt-square"></i></a>
+                  <a class="iconsA" href="https://github.com/fredyfarfanmt"><i class="fa fa-fw fa-github"></i></a>
+                  <a class="iconsA" href="https://www.linkedin.com/mwlite/in/fredyfarfan"><i class="fa fa-fw fa-linkedin-square "></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://media.istockphoto.com/vectors/head-of-businessman-abstract-geometric-avatar-face-icon-isolated-vector-id1128926343?k=20&m=1128926343&s=170667a&w=0&h=QyDkNjbsB4EJZrKtPSUQ1poG2NB3QTk0OD_bvyMna5c=" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Edison Saavedra</h4>
+                  <a class="iconsA" href="#"><i class="fa fa-fw fa-share-alt-square"></i></a>
+                  <a class="iconsA" href="https://github.com/Esaavedra4"><i class="fa fa-fw  fa-github"></i></a>
+                  <a class="iconsA" href="linkedin.com/in/edison-david-saavedra-amaya-7796b11bb"><i class="fa fa-fw fa-linkedin-square "></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://png.pngtree.com/png-vector/20190118/ourlarge/pngtree-vector-female-student-icon-png-image_326761.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Erika Bernal</h4>
+                  <a class="iconsA" href="#"><i class="fa fa-fw fa-share-alt-square"></i></a>
+                  <a class="iconsA" href="https://github.com/erikabernal"><i class="fa fa-fw  fa-github"></i></a>
+                  <a class="iconsA" href="https://www.linkedin.com/in/erika-milena-bernal-miranda-3097641b0/"><i class="fa fa-fw fa-linkedin-square "></i></a>
+                  </div>               
+              </div>
+            </div>
+          </div> 
 
-        <div id="contenedor">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Target</th>
-                        <th>Capacity</th>
-                        <th>Category_id</th>
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody class="cuerpoTabla">
-                    <tr>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
+
 
     </body>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript">
-
-        function cargarTabla() {
-            $.ajax({
-                url: 'https://g26e9109abcc6c1-db202109231843.adb.us-sanjose-1.oraclecloudapps.com/ords/admin/library/library',
-                type: 'GET',
-                data: 'json',
-                success: function(response) {
-                    var resultado = "";
-                    response.items.forEach(function(item){
-                      resultado+="<tr><td>"+item.id+"</td>";
-                      resultado+="<td>"+item.target+"</td>";
-                      resultado+="<td>"+item.capacity+"</td>";
-                      resultado+="<td>"+item.category_id+"</td></tr>";  
-                    });
-                    $('.cuerpoTabla').html(response);
-                },
-                error: function (xhr, status) {
-                    console.log(xhr.responseText);
-                },
-                complete: function (xhr, status){
-                    console.log(xhr.responseText)
-                }
-            })
-        }
-        $(document).ready(function(){
-
-            //getData();
-        });
-
-    </script>
-
+    <script srt="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"src="js/funciones.js"></script>
+   
 </html>

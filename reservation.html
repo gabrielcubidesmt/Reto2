@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Copatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reservacion</title>
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+   
+    <body class="homeBody">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">    
+        <a class="nav-link" href="index.html"><i class="fa fa-home"></i>Home</a>
+        <a class="nav-link" href="redirusers.html"><i class="fa fa-fw fa-user-plus"></i>Registro</a>
+        <a class="nav-link" href="category.html"><i class="fa fa-fw fa-tasks"></i>Categorias</a>      
+        <a class="nav-link" href="library.html"><i class="fa fa-fw fa-cubes "></i>Cubiculos</a>      
+        <a class="nav-link" href="message.html"><i class="fa fa-fw  fa-envelope "></i>Mensajes</a>      
+        <a class="nav-link" href="reservation.html"><i class="fa fa-fw fa-book"></i>Reservaciones</a>      
+        </ul>
+    </nav>
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h2><i class="fa fa-fw fa-book"></i> | Haz Tu Reserva</h2>
+            </div>
+            <div class="card-body">
+              <form>
+                <div>
+                  <label>Biblioteca | Cubiculo</label> <!-- client-->
+                  <select class="form-control" id="select-library"></select>              
+                </div>
+                <div>
+                  <label>Fecha Inicio</label>
+                  <input id="startDate" class="form-control" type="date" placeholder="">
+                </div>
+                <div>
+                  <label>Fecha Entrega</label>
+                  <input id="devolutionDate" class="form-control" type="date" placeholder="">
+                </div>
+                <div>
+                  <label>Cliente</label> <!-- libreria-->
+                  <select id="select-client" class="form-control" id="select-client"></select>                </div>
+                <div>
+                  <label>Score</label>
+                  <select class="form-control" id="select-score"></select>                </div>                
+                <br><button onclick="guardarInformacionReservation()" type="submit" class="btn btn-info">Crear Reserva</button>
+              </form>
+            </div>
+        </div>
+        </div>
+
+          <div id="contenedor">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Biblioteca</th>
+                        <th>Cliente</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Entrega</th>
+                    </tr>
+                </thead>
+                <tbody id="resultadoReservation">
+                </tbody>
+            </table>
+        </div>
+
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script srt="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"src="js/funciones.js"></script>
+   
+</html>
